@@ -7,11 +7,11 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "test",
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/30days-js/cache-time-limit.js"
+      "program": "${workspaceFolder}/2pointers/cntnr-water.js"
     }
   ]
 }
