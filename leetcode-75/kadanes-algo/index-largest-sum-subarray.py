@@ -3,7 +3,7 @@ from typing import List
 class Solution:
   def indexLargestSum(self, nums: List[int]) ->tuple[int]:
     currsum = 0
-    maxsum = float('inf')
+    maxsum = nums[0]
     L = 0
     maxL, maxR = 0, 0
 
