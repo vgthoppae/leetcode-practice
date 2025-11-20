@@ -14,5 +14,5 @@ class Solution:
 
 if __name__ == "__main__":
   s= Solution()
-  nums = [4, -1, 2, -7, 3, 4]
+  nums = [-5, -3, -5]
   print(s.largestSum(nums))
