@@ -21,7 +21,4 @@ def printval(curr, vals=[]):
 if __name__ == "__main__":
   head = build_list([1,2,3,4,5])
   printval(head)
-
-
-  
   

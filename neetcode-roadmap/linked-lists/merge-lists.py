@@ -1,3 +1,5 @@
+from linked_lists_builder import build_list, printval
+
 # Definition for singly-linked list.
 class ListNode:
   def __init__(self, val=0, next=None):
@@ -6,24 +8,31 @@ class ListNode:
 
 class Solution:
   def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-    dummy = node = ListNode()
+    dummy = ListNode()
+    curr = dummy
 
     while list1 and list2:
-      if list1.val<list2.val:
-        node.next = list1.val
+      if list1.val < list2.val:
+        curr.next = list1
         list1 = list1.next
       else:
-        node.next = list2.val
+        curr.next = list2
         list2 = list2.next
-      node = node.next
-    
-    return nummmy.next
+      curr = curr.next
+
+    if list1:
+      curr.next = list1
+    elif list2:
+      curr.next = list2
+
+    return dummy.next
 
 if __name__ == '__main__':
   s = Solution()
-  target = 12
-  position = [10,8,0,5,3]
-  speed = [2,4,1,1,3]
-  print(s.mergeTwoLists(target, position, speed))      
+  list1 = build_list([1,2,4])
+  list2 = build_list([1,3,5])
+  head = s.mergeTwoLists(list1, list2)
+  printval(head)
+
 
         
